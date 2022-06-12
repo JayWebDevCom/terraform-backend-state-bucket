@@ -8,3 +8,7 @@ variable "BUCKET_NAME" {
   type = string
 }
 
+variable "LOGS_BUCKET_NAME" {
+  type = string
+}
+

@@ -12,16 +12,17 @@
 ```hcl
 terraform {
   backend "s3" {
-    bucket = "terraform-backend-jaiye"
-    key    = "terraform/<project-name>/<file-name>"
-    region = "us-east-1"
+    bucket          = "terraform-backend-jaiye"
+    key             = "terraform/<project-name>/<file-name>"
+    region          = "us-east-1"
+    dynamodb_table  = "terraform-state"
   }
 }
 ```
 
 #### apply
- - terraform plan -out=plan.txt
- - terraform apply plan.txt
+ - terraform plan -out=plan
+ - terraform apply plan
 
 #### todo
  - move `logs_bucket` config to separate repo
